@@ -1,0 +1,57 @@
+# growth-lens-frontend (Public) — 비밀값·데이터 절대 금지
+# ============================================================
+# [공통] 비밀값·자격증명 — 4개 레포 동일 블록 (수정 시 전 레포 함께 변경)
+# ============================================================
+.env
+.env.*
+*.env
+!.env.example
+.envrc
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+credentials*.json
+*service-account*.json
+*service_account*.json
+client_secret*.json
+token.json
+.netrc
+.streamlit/secrets.toml
+
+# [공통] 로그·캐시·가상환경·OS
+*.log
+logs/
+.cache/
+.venv/
+venv/
+__pycache__/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ============================================================
+# [frontend] 의존성·빌드 산출물 (프레임워크 확정 후 보완)
+# ============================================================
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.output/
+.svelte-kit/
+coverage/
+*.local
+.vercel/
+.netlify/
+# 데이터 파일 차단 (화면 데이터는 backend API 로만)
+*.csv
+*.xlsx
+*.parquet
